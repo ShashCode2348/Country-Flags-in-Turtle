@@ -1,5 +1,3 @@
-import turtle as t
-
 def rectangle(horizontal, vertical, color):
     t.pendown()
     t.pensize(1)
@@ -22,6 +20,7 @@ def star(length, points, color):
     t.pendown()
     t.begin_fill()
     t.penup()
+    t.right(smallangle/2 + 180)
     for counter in range(points):
         t.forward(length)
         t.left(smallangle)
@@ -31,7 +30,7 @@ def star(length, points, color):
 
 t.penup()
 
-gotoy = 222
+gotoy = 213
 
 t.speed(0)
 t.setup(988,520)
@@ -51,22 +50,22 @@ t.goto(-494,260)
 t.pendown()
 
 rectangle(494,280,'#3C3B6E')
-t.goto(-474,245)
+t.goto(-465,227)
 for counter in range(4):
     for counter in range(6):
         star(9,5,'white')
         t.setheading(0)
         t.forward(84)
         t.penup()
-    t.goto(-434,gotoy)
-    gotoy = gotoy - 28
+    t.goto(-425,gotoy)
+    gotoy = gotoy - 32
     t.pendown()
     for counter in range(5):
         star(9,5,'white')
         t.setheading(0)
         t.forward(84)
-    t.goto(-476,gotoy)
-    gotoy = gotoy - 28
+    t.goto(-465,gotoy)
+    gotoy = gotoy - 32
 
 for counter in range(6):
         star(9,5,'white')
